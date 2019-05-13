@@ -2,6 +2,7 @@
 \input{preamble}
 
 \begin{document}
+\setcounter{tocdepth}{1}
 \title{Notizen und Gedanken zu Niklas Luhmann.}
 \author{Arne Hofmann}
 \date{\today}
@@ -52,6 +53,43 @@ Kneer/Nassehi \cite{kneerNiklasLuhmannsTheorie1993} sagen:
 \begin{quote}
 \emph{System}: Ganzheit einer Menge von Elementen und deren Relation zueinander.
 \end{quote}
+\subsection{Kommunikation}
+Der Begriff \emph{Kommunikation} ist sp\"atestens seit Shannon \cite{shannon1948mathematical} Teil der Mathematik. Daraus ein pr\"agnanter Abschnitt:
+\begin{quotation}
+The fundamental problem of communication is that of reproducing at one point either exactly or approximately a message selected at another point. Frequently the messages have meaning; that is they refer to or are correlated according to some system with certain physical or conceptual entities.  These semantic aspects of communication are irrelevant to the engineering problem. The significant aspect is that the actual message is one selected from a set of possible messages. The system must be designed to operate for each possible selection, not just the one which will actually be chosen since this is unknown at the time of design.
+\end{quotation}
+Ich lese dieses Paper gerade (13.5.19) zum ersten Mal, obwohl es in der angewandten Mathematik geradezu ber\"uhmt ist. Die Mathematik ist nicht besonders kompliziert; ich denke, es ist auch f\"ur Geisteswissenschaftler einen Blick wert.
+
+Insbesondere gibt es bei Shannon eine Abbildung (Abbildung \ref{fig:shannon-1}), die ziemlich genau dem entspricht, was ich in der heutigen Diskussion skizziert habe (bevor ich mir den Artikel angeguckt hatte).
+
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth]{figures/shannon-1.eps}
+\caption{Abbildung aus \cite{shannon1948mathematical}.\label{fig:shannon-1}}
+\end{figure}
+
+Es gibt jedoch auch Unterschiede. Shannon interessiert sich nur f\"ur explizite Nachrichten, die nach einem vereinbarten System verschickt werden. Das hei{\ss}t zum Beispiel auch, dass der \emph{Receiver} einfach die inverse Operation zum \emph{Transmitter} ausf\"uhrt. Luhmann will offenbar auch subtilere Arten der Kommunikation behandeln (K\"orpersprache, Gesichtsausdr\"ucke, unklarer Sprachgebrauch usw.).
+
+\emph{Arbeitshypothese}: man kann allgemeinere menschliche Kommunikation in die Abbildung \ref{fig:shannon-1} integrieren, indem man die Arbeitsweisen von Transmitter und Empf\"anger als variabel und abh\"angig von einem psychischen System (Mensch) betrachtet.
+
+Unter diesen Umst\"anden ist es erst einmal sinnvoll, davon auszugehen, dass es keine St\"orung in der \"Ubertragung gibt. Dann haben wir einfach eine Operation des Transmitters, $\phi$, und eine des Empf\"angers, $\phi'$. Damit eine Botschaft $A$ perfekt \"ubertragen wird, muss
+\begin{align}
+\phi'(\phi(A)) = A
+\end{align}
+sein. Damit dies f\"ur beliebige Botschaften $A$ gilt, muss $\phi'$ gerade die inverse Operation zu $\phi$ sein.
+
+Wenn $\phi$ und $\phi'$ variabel sind, ist perfekte Kommunikation also nur unter sehr besonderen Umst\"anden m\"oglich. Es muss irgendwie zumindest eine grobe Art Einigung hergestellt werden, \emph{wie man miteinander kommuniziert}. Wie soll das geschehen, wenn nicht per Kommunikation? Da haben wir schon unser rekursives Element!
+
+Wir wollen ein paar erste Definitionen versuchen, die allerdings \"uberhaupt nicht so pr\"azise sind, wie sie vielleicht auf den ersten Blick aussehen. Man darf nicht vergessen, dass die Operationen des Transmitters vom \emph{Zustand eines psychischen Systems abh\"angig sein sollen}. Das ist noch nicht richtig zum Ausdruck gebracht.
+\begin{defn} Ein \emph{Kommunikator} $T$ ist gleichzeitig ein Transmitter und ein Empf\"anger. Die \emph{Sendeoperation} von $T$ schreiben wir als $\phi_T$ und die \emph{Empf\"angeroperation} als $\psi_T$. 
+\end{defn}
+\begin{defn} Sei $\mathcal{A}$ eine Sprache und $A \in \mathcal{A}$ ein Wort. Seien ferner $T_1, T_2$ Kommunikatoren. Eine \emph{Kommunikation von} $T_1$ \emph{zu} $T_2$ ist ein Paar $(A, \psi_{T_2}(\phi_{T_1}(A)))$.
+\end{defn}
+Vielleicht nennen wir dieses Konzept besser eine \emph{\"Ubertragung} -- und sprechen nur von \emph{Kommunikation}, wenn $A \approx \psi_{T_2}(\phi_{T_1}((A))$ (ungef\"ahr gleich)?
+
+Dann k\"onnen wir n\"ahmlich eine Grenze oder \emph{Differenz} herstellen (und damit Luhmanns gr\"o{\ss}te Sehnsucht befriedigen) -- zwischen Kommunikationen und \"Ubertragungen, die keine Kommunikationen sind. Diese Differenz h\"angt einerseits entscheidend von den psychischen Systemen ab, an denen die ganze \"Ubertragung h\"angt, muss andererseits selber durch Kommunikation hergestellt werden (man kommuniziert dar\"uber, wie man kommunizieren kann).
+
+Ich sehe jedoch nicht, wie sich hier das System der Kommunikationen gegen die psychischen Systeme absetzt, die nach Luhmann ja die \emph{Umwelt} des Kommunikationssystems bilden sollen.
 \subsection{Komplexit\"at}
 \subsection{Elemente}
 \section{Beispiele}
